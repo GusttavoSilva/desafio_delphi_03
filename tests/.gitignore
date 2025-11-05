@@ -1,0 +1,19 @@
+# Arquivos de Teste - Ignorar outputs
+tests/*.exe
+tests/*.dcu
+tests/*.log
+tests/*.xml
+tests/*.map
+tests/*.rsm
+tests/*.local
+tests/*.identcache
+tests/Win32/
+tests/Win64/
+tests/__history/
+tests/__recovery/
+
+# Manter estrutura de pastas vazias
+!tests/fixtures/.gitkeep
+!tests/mocks/.gitkeep
+!tests/unit/.gitkeep
+!tests/e2e/.gitkeep
