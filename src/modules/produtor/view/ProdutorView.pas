@@ -172,12 +172,12 @@ begin
                 mtConfirmation, [mbYes, mbNo], 0) = mrYes then
   begin
     try
-  FProdutorModule.Controller.Excluir(FProdutorAtual);
-  ShowMessage('Produtor exclu�do com sucesso!');
+      FProdutorModule.Controller.Excluir(FProdutorAtual);
+      ShowMessage('Produtor excluído com sucesso!');
 
-  LimparCampos;
-  HabilitarEdicao(False);
-  CarregarProdutores;
+      LimparCampos;
+      HabilitarEdicao(False);
+      CarregarProdutores;
     except
       on E: Exception do
         ShowMessage('Erro ao excluir: ' + E.Message);

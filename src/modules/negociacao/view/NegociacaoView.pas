@@ -650,7 +650,7 @@ begin
   cboProdutor.Enabled := LPodeEditar;
   cboDistribuidor.Enabled := False; // Distribuidor sempre fixo (logado)
   btnAdicionarItem.Enabled := LPodeEditar;
-  btnRemoverItem.Enabled := LPodeEditar;// and (not FItensDataSet.IsEmpty);
+  btnRemoverItem.Enabled := LPodeEditar;
   
   btnSalvar.Enabled := LPodeEditar;
   btnCancelar.Enabled := AHabilitar;

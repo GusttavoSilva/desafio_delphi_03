@@ -16,6 +16,7 @@ type
   private
     FConnection: TFDConnection;
     function MapResultToEntity(AQuery: TFDQuery): TProdutoEntity;
+    procedure MapDates(AEntity: TProdutoEntity; AQuery: TFDQuery);
   public
     constructor Create(AConnection: TFDConnection);
 
@@ -36,7 +37,7 @@ begin
   FConnection := AConnection;
 end;
 
-procedure MapDates(AEntity: TProdutoEntity; AQuery: TFDQuery);
+procedure TProdutoRepositoryFB.MapDates(AEntity: TProdutoEntity; AQuery: TFDQuery);
 begin
   AEntity.CreatedAt := AQuery.FieldByName('data_criacao').AsDateTime;
   AEntity.UpdatedAt := AQuery.FieldByName('data_atualizacao').AsDateTime;
