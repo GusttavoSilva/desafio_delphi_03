@@ -494,7 +494,6 @@ end;
 procedure TfrmNegociacaoView.dbgNegociacoesCellClick(Column: TColumn);
 var
   LId: string;
-  LCountItens: Integer;
 begin
   if not Assigned(dsNegociacao.DataSet) or dsNegociacao.DataSet.IsEmpty then
     Exit;
@@ -511,14 +510,6 @@ begin
     begin
       FNegociacaoAtual.State := esUpdate;
       // Os itens já foram carregados pelo controller via CarregarItens
-      
-      // Debug: verificar quantos itens foram carregados
-      LCountItens := 0;
-      if Assigned(FNegociacaoAtual.Itens) then
-        LCountItens := FNegociacaoAtual.Itens.Count;
-      
-      // Descomentar para debug:
-      // ShowMessage(Format('Negociação ID: %s - Itens carregados: %d', [LId, LCountItens]));
       
       CarregarNegociacaoNaTela(FNegociacaoAtual);
       PreencherGridItens;

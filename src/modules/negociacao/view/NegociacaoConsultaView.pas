@@ -127,7 +127,6 @@ procedure TfrmNegociacaoConsultaView.CarregarProdutores;
 var
   LLista: TObjectList<TProdutorEntity>;
   LItem: TProdutorEntity;
-  LIdStr: string;
 begin
   LLista := FProdutorModule.Controller.ListarTodos;
   try
